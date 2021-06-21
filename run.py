@@ -19,10 +19,19 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+def index():
+    return render_template("index.html")
+
+
 @app.route("/get_videos")
 def get_videos():
     videos = mongo.db.videos.find()
     return render_template("videos.html", videos=videos)
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
