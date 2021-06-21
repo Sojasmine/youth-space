@@ -1,6 +1,13 @@
 @import url(https://fonts.googleapis.com/css2?family=Akronim);
 
-.brand-logo h4{
+body {
+
+  background: url('../images/graffiti.jpg');
+}
+/* Code snippet from codepen.io  */
+
+
+.brand-logo h5{
     text-align: left;
     width: 45%;
     height: 50px;
@@ -11,6 +18,7 @@
     right: 0;
     bottom: 0;
     user-select: none;
+    
  }
   
   .brand-logo b{
@@ -58,3 +66,36 @@
     }
   }
   
+  
+  .glow {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow:  0 0 2px #fff, 0 0 2px #fff, 0 0 2px #faf5f8, 0 0 2px;
+    }
+    
+    to {
+      text-shadow: 0 0 2px #fff, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6; 
+    }
+  }
+
+.nav-wrapper {
+  background: linear-gradient(#0400ff, #ff3d00);
+}
+  
+.dotted {
+  border: 0.5rem outset pink;
+  box-shadow: 0 0 0 2rem skyblue;
+  border-radius: 10px;
+  font: bold 1rem sans-serif;
+  margin: 8rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
+  background: linear-gradient(#0400ff, #ff3d00);
+  
+}
