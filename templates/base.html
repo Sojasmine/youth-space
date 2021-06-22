@@ -32,7 +32,7 @@
                     <li><a href="#"><i class="tiny fa fa-list-alt" aria-hidden="true"></i> Categories</a></li>
                     <li><a href="#"><i class="tiny fa fa-sign-out-alt" aria-hidden="true"></i> Sign Out</a></li>
                     <li><a href="#"><i class="tiny fa fa-sign-in-alt" aria-hidden="true"></i> Sign In</a></li>
-                    <li><a href="#"><i class="tiny fa fa-file-alt" aria-hidden="true"></i> Register</a></li>
+                    <li><a href="{{ url_for('register') }}"><i class="tiny fa fa-file-alt" aria-hidden="true"></i> Register</a></li>
                     <li><a href="{{ url_for('contact') }}"><i class="tiny fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
             <li><a href="#"><i class="tiny fa fa-list-alt" aria-hidden="true"></i>Categories</a></li>
             <li><a href="#"><i class="tiny fa fa-sign-out-alt" aria-hidden="true"></i>Sign Out</a></li>
             <li><a href="#"><i class="tiny fa fa-sign-in-alt" aria-hidden="true"></i>Sign In</a></li>
-            <li><a href="#"><i class="tiny fa fa-file-alt" aria-hidden="true"></i>Register</a></li>
+            <li><a href="{{ url_for('register') }}"><i class="tiny fa fa-file-alt" aria-hidden="true"></i>Register</a></li>
             <li><a href="{{ url_for('contact') }}"><i class="tiny fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
         </ul>
     </header>
