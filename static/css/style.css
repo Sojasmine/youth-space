@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Akronim');
 
-
+/* Code for the background image*/
 body {
 
   background: url('../images/graffiti.jpg');
 }
-/* Code snippet from codepen.io  */
 
-
+/* Code for the logo snippet from https://codepen.io/nodws/pen/bdjwn */
 .brand-logo h4{
     text-align: left;
     width: 45%;
@@ -67,7 +66,8 @@ body {
     }
   }
   
-  
+
+/* code for the text in the middle of home page */
   .glow {
     font-size: 40px;
     color: #fff;
@@ -77,12 +77,15 @@ body {
     
     
   }
-  
-  
+ 
+
+/* code for navbar background color*/
 .nav-wrapper {
   background: linear-gradient(#0400ff, #ff3d00);
 }
-  
+
+
+/* code for the border in the middle of home page,code snippet from https://developer.mozilla.org/en-US/docs/Web/CSS/border*/
 .solid {
   border: 4mm ridge rgba(170, 50, 220, .6);
   box-shadow: 0 0 0 2rem skyblue;
@@ -93,7 +96,26 @@ body {
   outline-offset: 0.5rem;
   background: linear-gradient(#0400ff, #ff3d00);
   
-}
+} 
+
+
+/* code for icons */
 .tiny {
   color: skyblue;
+}
+
+
+/* Code for the sign up button */
+.btn {
+  background-image: linear-gradient(to right, #790758 0%, #0e60ee 51%, #f51fb8 100%);
+}
+
+form {
+  border: 4mm ridge rgba(170, 50, 220, .6);
+  box-shadow: 0 0 0 2rem skyblue;
+  border-radius: 10px;
+  font: bold 1rem sans-serif;
+  margin: 8rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
 }

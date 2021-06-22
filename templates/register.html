@@ -1,10 +1,70 @@
 {% extends "base.html" %}
 {% block content %}
- 
+
+<!-- Headings on the registration page and paragraph -->
+<h4 class="center-align">Create your account</h4>
+<p class="center-align">Please fill this form to create an account!</p>
+
+<!-- Registration form -->
+<div class="row">
+    <form class="col s12 m4 offset-m4" medthod="POST"  action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user-circle prefix"></i>
+                    <input id="username" name="username" type="text" class="validate">
+                    <label for="username">username</label>
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user-lock prefix"></i>
+                    <input id="password" name="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- First Name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user prefix"></i>
+                    <input placeholder="first_name" name="first_name" id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+            </div>
+            <!-- Last Name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user prefix"></i>
+                    <input placeholder="last_name" name="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <!-- Select country -->
+            <div class="row">
+            <div class="input-field col s12">
+                <i class="tiny fas fa-globe prefix"></i>
+                    <select>
+                    <option value="country" disabled selected>Select country</option>
+                    <option value="1">Europe</option>
+                    <option value="2">Africa</option>
+                    <option value="3">Asia</option>
+                    <option value="3">United States</option>
+                </select>
+            </div>
+            </div>
+            <!-- Sign up button-->
+            <div class="row">
+                <button type="submit" class="col s12 btn small">
+                    Sign up <i class="tiny fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+    </form>
+</div>
 
 
 
-        
 
 
 {% endblock %}
