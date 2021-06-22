@@ -110,12 +110,3 @@ body {
   background-image: linear-gradient(to right, #790758 0%, #0e60ee 51%, #f51fb8 100%);
 }
 
-form {
-  border: 4mm ridge rgba(170, 50, 220, .6);
-  box-shadow: 0 0 0 2rem skyblue;
-  border-radius: 10px;
-  font: bold 1rem sans-serif;
-  margin: 8rem;
-  padding: 1rem;
-  outline-offset: 0.5rem;
-}
