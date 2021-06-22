@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Akronim);
+@import url('https://fonts.googleapis.com/css2?family=Akronim');
+
 
 body {
 
@@ -7,7 +8,7 @@ body {
 /* Code snippet from codepen.io  */
 
 
-.brand-logo h5{
+.brand-logo h4{
     text-align: left;
     width: 45%;
     height: 50px;
@@ -71,25 +72,19 @@ body {
     font-size: 40px;
     color: #fff;
     text-align: center;
-    animation: glow 1s ease-in infinite alternate;
+    text-shadow: 1px 1px 1px black,
+                 2px 2px 1px black;
+    
+    
   }
   
-  @-webkit-keyframes glow {
-    from {
-      text-shadow:  0 0 2px #fff, 0 0 2px #fff, 0 0 2px #faf5f8, 0 0 2px;
-    }
-    
-    to {
-      text-shadow: 0 0 2px #fff, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6, 0 0 2px #ff4da6; 
-    }
-  }
-
+  
 .nav-wrapper {
   background: linear-gradient(#0400ff, #ff3d00);
 }
   
-.dotted {
-  border: 0.5rem outset pink;
+.solid {
+  border: 4mm ridge rgba(170, 50, 220, .6);
   box-shadow: 0 0 0 2rem skyblue;
   border-radius: 10px;
   font: bold 1rem sans-serif;
@@ -98,4 +93,7 @@ body {
   outline-offset: 0.5rem;
   background: linear-gradient(#0400ff, #ff3d00);
   
+}
+.tiny {
+  color: skyblue;
 }
