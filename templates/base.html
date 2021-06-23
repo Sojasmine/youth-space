@@ -28,7 +28,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('index') }}"><i class="tiny fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li><a href="{{ url_for('get_videos') }}"><i class="tiny fa fa-film " aria-hidden="true"></i> Videos</a></li>
-                    <li><a href="#"><i class="tiny fa fa-user-circle" aria-hidden="true"></i> Profile</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="tiny fa fa-user-circle" aria-hidden="true"></i> Profile</a></li>
                     <li><a href="#"><i class="tiny fa fa-upload" aria-hidden="true"></i> Upload Video</a></li>
                     <li><a href="#"><i class="tiny fa fa-list-alt" aria-hidden="true"></i> Categories</a></li>
                     <li><a href="#"><i class="tiny fa fa-sign-out-alt" aria-hidden="true"></i> Sign Out</a></li>
@@ -43,12 +43,12 @@
             <li><h4 class="center-align"></h4>Youth Space</li>
             <li><a href="{{ url_for('index') }}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
             <li><a href="{{ url_for('get_videos') }}"><i class="tiny fa fa-film" aria-hidden="true"></i>Videos</a></li>
-            <li><a href="#"><i class="tiny fa fa-user-circle" aria-hidden="true"></i>Profile</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="tiny fa fa-user-circle" aria-hidden="true"></i>Profile</a></li>
             <li><a href="#"><i class="tiny fa fa-upload" aria-hidden="true"></i>Upload Video</a></li>
             <li><a href="#"><i class="tiny fa fa-list-alt" aria-hidden="true"></i>Categories</a></li>
             <li><a href="#"><i class="tiny fa fa-sign-out-alt" aria-hidden="true"></i>Sign Out</a></li>
-            <li><a href="{{ url_for('contact') }}"><i class="tiny fa fa-sign-in-alt" aria-hidden="true"></i>Sign In</a></li>
-            <li><a href="{{ url_for('signin') }}"><i class="tiny fa fa-file-alt" aria-hidden="true"></i>Register</a></li>
+            <li><a href="{{ url_for('signin') }}"><i class="tiny fa fa-sign-in-alt" aria-hidden="true"></i>Sign In</a></li>
+            <li><a href="{{ url_for('register') }}"><i class="tiny fa fa-file-alt" aria-hidden="true"></i>Register</a></li>
             <li><a href="{{ url_for('contact') }}"><i class="tiny fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
         </ul>
     </header>
