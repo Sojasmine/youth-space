@@ -88,7 +88,7 @@ body {
 /* code for the border in the middle of home page,code snippet from https://developer.mozilla.org/en-US/docs/Web/CSS/border*/
 .solid {
   border: 4mm ridge rgba(170, 50, 220, .6);
-  box-shadow: 0 0 0 2rem skyblue;
+  box-shadow: 0 0 0 0.5rem skyblue;
   border-radius: 10px;
   font: bold 1rem sans-serif;
   margin: 8rem;
@@ -110,3 +110,9 @@ body {
   background-image: linear-gradient(to right, #790758 0%, #0e60ee 51%, #f51fb8 100%);
 }
 
+.flashes h6 {
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 20px 20px;
+  
+}
