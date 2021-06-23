@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Headings on the registration page and paragraph -->
+<h4 class="center-align">Sign In</h4>
+<p class="center-align">Welcome back. Nice to see you again!</p>
+
+<!-- Registration form -->
+<div class="row">
+    <form class="col s12 m4 offset-m4" method="POST"  action="{{ url_for('signin') }}">
+        <div class="card-panel">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user-cog prefix"></i>
+                    <input id="username" name="username" type="text" minlength="5"
+                         maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" class="validate" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user-lock prefix"></i>
+                    <input id="password" name="password" type="password" minlength="5" 
+                        maxlenght="15" pattern="^[a-zA-Z0-9]{5-15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            
+           <!-- Sign in button-->
+            <div class="row">
+                <button type="submit" class="col s12 btn small">
+                    Sign In <i class="tiny fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <p class="center-align">
+            Don't have an account?
+            <a href="{{ url_for('register') }}" class="light-blue">Create an Account</a>
+        </p>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
