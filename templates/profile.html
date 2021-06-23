@@ -1,15 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!--  -->
+<!-- User's profile display here  -->
 <div class="row">
     <div class="col s12 m4 offset-m4">
         <div class="card-panel">
             <h4 class="center-align">
-                {{ username }}'s Profile
+                {{ username }}
             </h4>
        </div>   
     </div>
+</div>
+
+<!-- User's profile information here -->
+
+<div class="row">
+    <form class="col s12 m4 offset-m4" method="POST"  action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!-- user email -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-at prefix"></i>
+                    <input id="email" name="email" type="text" 
+                          class="validate">
+                    <label for="email">
+                        {{ email }}
+                    </label>
+                </div>
+            </div>
+           <!-- First Name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user-cog prefix"></i>
+                    <input placeholder="first_name" name="first_name" id="first_name" type="text" class="validate" required>
+                    <label for="first_name">
+                        {{ first }}
+                    </label>
+                </div>
+            </div>
+            <!-- Last Name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user-cog prefix"></i>
+                    <input placeholder="last_name" name="last_name" type="text" class="validate" required>
+                    <label for="last_name">
+                        {{ last }}
+                    </label>
+                </div>
+            </div>
+            
+    </form>
 </div>
 
 
