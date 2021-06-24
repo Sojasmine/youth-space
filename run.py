@@ -26,7 +26,7 @@ def index():
 
 @app.route("/get_videos")
 def get_videos():
-    videos = mongo.db.videos.find()
+    videos = list(mongo.db.videos.find())
     return render_template("videos.html", videos=videos)
 
 
@@ -53,7 +53,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Your registration is complete!")
         return redirect(url_for("profile", username=session["user"]))
-        
+
     return render_template("register.html")
 
 
@@ -94,7 +94,7 @@ def profile(username):
 
     if session["user"]:
         return render_template("profile.html", username=username)
-    
+        
     return redirect(url_for("signin"))
 
 

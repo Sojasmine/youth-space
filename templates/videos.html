@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-   
+
+
+<video class="responsive-video" width="550" controls>
     {% for video in videos %}
-        {{ video.category_name }}<br>
-        {{ video.video_title }}<br>
-        {{ video.genre }}<br>
+    <source src="" width="650" type="" frameborder="0" allowfullscreen>
+</video><br>
+<strong>Category: {{ video.category_name }}</strong><br>
+    <strong>Title: {{ video.video_title }}</strong><br>
+    <strong>Genre: {{ video.genre }}<br></strong><br>
     {% endfor %}
 
+    
 {% endblock %}
