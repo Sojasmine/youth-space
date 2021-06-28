@@ -1,20 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--heading and parahrapf for contact form-->
+<h4 class="center-align">Contact Us</h4>
+<p class="center-align">Please fill this form to contact us!</p>
+
+<!-- Contact form-->
 <div class="row">
-<form class="col s12 m4 offset-m4" method="POST" action="https://formsubmit.co/youth.aspace@gmail.com" enctype="multipart/form-data">
-    
-    <div class="input-field col s12">
-    <input type="hidden" name="_subject" value="New email!">
-    <input type="email" name="email" placeholder="Email Address" required>
-    
-    <input type="text" name="name" required>
-    <textarea name="message" placeholder="Write your message here..."></textarea>
-    <input type="file" name="attachment" accept="image/png, image/jpeg">
-    <button class="btn waves-effect waves-light" type="submit">Send</button>
-    </div>
-  </form>
+    <form class="col s12 m4 offset-m4" method="POST" action="https://formsubmit.co/youth.aspace@gmail.com"
+        enctype="multipart/form-data">
+        <div class="card-panel">
+            <!--message to the recipient-->
+            <input type="hidden" name="_subject" value="New email!">
+            <!--email-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-at prefix"></i>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+            </div>
+            <!--name of the sender-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-user prefix"></i>
+                    <input type="text" name="name" required>
+                </div>
+            </div>
+            <!--message-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-pencil-alt prefix"></i>
+                    <textarea name="message" placeholder="Write your message here..."></textarea>
+                </div>
+            </div>
+            <!--for attached file-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="tiny fas fa-paperclip prefix"></i>
+                    <input type="file" name="attachment" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+            <!--send button-->
+            <div class="row">
+            <button class="btn waves-effect waves-light col s12" type="submit">
+                <i class="tiny fas fa-sign-in-alt"></i>Send</button>
+            </div>
+        </div>
+</div>
+</form>
 </div>
 </div>
+
 
 {% endblock %}
