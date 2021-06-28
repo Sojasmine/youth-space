@@ -1,4 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Contact Us</h1>
+
+<div class="row">
+<form class="col s12 m4 offset-m4" method="POST" action="https://formsubmit.co/youth.aspace@gmail.com" enctype="multipart/form-data">
+    
+    <div class="input-field col s12">
+    <input type="hidden" name="_subject" value="New email!">
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="hidden" name="_next" value="https://youth-space-ms3.herokuapp.com/templates/thankyou.html">
+    <input type="text" name="name" required>
+    <textarea name="message" placeholder="Write your message here..."></textarea>
+    <input type="file" name="attachment" accept="image/png, image/jpeg">
+    <button class="btn waves-effect waves-light" type="submit">Send</button>
+    </div>
+  </form>
+</div>
+</div>
+
 {% endblock %}

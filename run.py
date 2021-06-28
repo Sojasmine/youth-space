@@ -111,6 +111,12 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route("/thankyou")
+def thankyou():
+    flash("Thank you!")
+    return render_template("thankyou.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
