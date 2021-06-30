@@ -1,4 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% block styles %}
+<style>
+
+   body {
+       background: lightblue;
+   }
+</style>
+{% endblock %}
+
+<div class="container">
+    <h4 class="center-align">Upload videos</h4>
+   <p class="center-align"> <i class="fas fa-exclamation-circle red"></i> Before uploading files to <strong>Youth Space</strong>, please ensure that you own,
+     or have the legal right to distribute them.
+     If you do not own the files, and do not have express permission from the owner or copyright holder,
+     you may not place them here.
+    </p>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="file-field input-field">
+
+            <div class="btn">
+                <span>File</span>
+                <input oninput="filesize(this);" type="file" class="input-field" name="video" id="video">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+
+        <button class="btn waves-effect waves-light col s12" type="submit">
+            Submit <i class="tiny fas fa-sign-in-alt"></i></button>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+
+function filesize(elem) {
+
+    document.cookie = `filesize=${elem.files[0].size}`
+    
+}
+
+</script>
+
 {% endblock %}

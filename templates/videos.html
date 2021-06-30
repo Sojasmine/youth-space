@@ -2,11 +2,24 @@
 {% block content %}
 
 
-<video class="responsive-video" width="550" controls>
-    {% for video in videos %}
-    <source src="" width="650" type="" frameborder="0" allowfullscreen>
-</video><br>
-<strong>Category: {{ video.category_name }}</strong><br>
+{% block styles %}
+<style>
+
+   body {
+       background: lightblue;
+   }
+</style>
+{% endblock %}
+
+{% for video in videos %}
+
+<video class="responsive-video" width="320" height="240" controls>
+    <a href="{{ url_for('upload') }}"></a>
+    <source src="?=$vid['/workspace/youth-space/static/videos']?" width="650" type="video/mp4" frameborder="0" allowfullscreen>
+</video><br> 
+            
+           Filename: {{ videos }}
+    <strong>Category: {{ video.category_name }}</strong><br>
     <strong>Title: {{ video.video_title }}</strong><br>
     <strong>Genre: {{ video.genre }}<br></strong><br>
     {% endfor %}

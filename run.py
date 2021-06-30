@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 if os.path.exists("env.py"):
     import env
 
@@ -13,7 +14,9 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-
+app.config["VIDEO_UPLOADS"] = "/workspace/youth-space/static/videos"
+app.config["ALLOWED_VIDEO_EXTENSIONS"] = ["MP4", "MOV", "GIF"]
+app.config["MAX_VIDEO-FILESIZE"] = 10000000
 
 app.secret_key = os.environ.get("SECRET_KEY")
 
@@ -106,6 +109,48 @@ def signout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("signin"))
+
+
+def allowed_video(filename):
+    if not "." in filename:
+        return False
+    ext = filename.rsplit(".", 1)[1]
+    if ext.upper() in app.config["ALLOWED_VIDEO_EXTENSIONS"]:
+        return True
+    else:
+        return False
+
+
+def allowed_video_filesize(filesize):
+
+    if int(filesize) <= app.config["MAX_VIDEO-FILESIZE"]:
+        return True
+    else:
+        return False
+
+
+@app.route("/upload", methods=["GET", "POST"])
+def upload():
+    if request.method == "POST":
+        if request.files:
+            if not allowed_video_filesize(request.cookies.get("filesize")):
+                flash("File exceeded maximum size")
+                return redirect(request.url)
+            video = request.files["video"]
+            if video.filename == "":
+                flash("video must have a filename")
+                return redirect(request.url)
+            # If the video format is not MP4, MOV, or GIF
+            if not allowed_video(video.filename):
+                flash("That video extension is not allowed")
+                return redirect(request.url)
+            else:
+                filename = secure_filename(video.filename) 
+                video.save(os.path.join(
+                app.config["VIDEO_UPLOADS"], filename))
+            flash("video loaded")
+            return redirect(request.url)
+    return render_template("upload.html")
 
 
 @app.route("/contact")

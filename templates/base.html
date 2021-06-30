@@ -30,7 +30,7 @@
                     <li><a href="{{ url_for('get_videos') }}"><i class="tiny fa fa-film " aria-hidden="true"></i> Videos</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="tiny fa fa-user-circle" aria-hidden="true"></i> Profile</a></li>
-                    <li><a href="#"><i class="tiny fa fa-upload" aria-hidden="true"></i> Upload Video</a></li>
+                    <li><a href="{{ url_for('upload') }}"><i class="tiny fa fa-upload" aria-hidden="true"></i> Upload Video</a></li>
                     <li><a href="#"><i class="tiny fa fa-list-alt" aria-hidden="true"></i> Categories</a></li>
                     <li><a href="{{ url_for('signout') }}"><i class="tiny fa fa-sign-out-alt" aria-hidden="true"></i> Sign Out</a></li>
                 {% else %}
@@ -48,7 +48,7 @@
                 <li><a href="{{ url_for('get_videos') }}"><i class="tiny fa fa-film " aria-hidden="true"></i> Videos</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="tiny fa fa-user-circle" aria-hidden="true"></i> Profile</a></li>
-                <li><a href="#"><i class="tiny fa fa-upload" aria-hidden="true"></i> Upload Video</a></li>
+                <li><a href="{{ url_for('upload') }}"><i class="tiny fa fa-upload" aria-hidden="true"></i> Upload Video</a></li>
                 <li><a href="#"><i class="tiny fa fa-list-alt" aria-hidden="true"></i> Categories</a></li>
                 <li><a href="{{ url_for('signout') }}"><i class="tiny fa fa-sign-out-alt" aria-hidden="true"></i> Sign Out</a></li>
             {% else %}
