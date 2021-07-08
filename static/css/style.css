@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Akronim');
 
-/* Code for the background image*/
-body {
 
-  background: url('../images/graffiti.jpg');
-}
 
 /* Code for the logo snippet from https://codepen.io/nodws/pen/bdjwn */
 .brand-logo h4{
@@ -81,7 +77,7 @@ body {
 
 /* code for navbar background color*/
 .nav-wrapper {
-  background: linear-gradient(#0400ff, #ff3d00);
+  background: black;
 }
 
 
@@ -94,7 +90,7 @@ body {
   margin: 8rem;
   padding: 1rem;
   outline-offset: 0.5rem;
-  background: linear-gradient(#0400ff, #ff3d00);
+  background: linear-gradient(#38383b, #181616);
   
 } 
 
