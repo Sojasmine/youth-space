@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from app.common.db import mongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
@@ -12,16 +13,15 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+
+
+
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.config["VIDEO_UPLOADS"] = "/workspace/youth-space/static/videos"
-app.config["ALLOWED_VIDEO_EXTENSIONS"] = ["MP4", "MOV", "GIF"]
-app.config["MAX_VIDEO-FILESIZE"] = 10000000
+
+mongo = PyMongo(app) 
 
 app.secret_key = os.environ.get("SECRET_KEY")
-
-
-mongo = PyMongo(app)
 
 
 @app.route("/")
